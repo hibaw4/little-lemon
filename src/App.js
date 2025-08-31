@@ -1,30 +1,26 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Homepage from "./components/Homepage";
+import BookingPage from "./components/BookingPage";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <Router>
       <header>
-        <nav>
-          <h1>Little Lemon</h1>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/reserve">Reserve</a></li>
-            <li><a href="/menu">Menu</a></li>
-          </ul>
-        </nav>
+        <Nav />
       </header>
 
       <main>
-        <section className="section">About Little Lemon</section>
-        <section className="section">Highlights & Specials</section>
-        <section className="section">Dishes & Photos</section>
-        <section className="section">Testimonials</section>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/booking" element={<BookingPage />} />
+        </Routes>
       </main>
 
-      <footer>
-        <p>© 2025 Little Lemon Restaurant</p>
-      </footer>
-    </>
+      <Footer />
+    </Router>
   );
 }
 
