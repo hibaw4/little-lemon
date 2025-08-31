@@ -1,4 +1,3 @@
-// App.js
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useReducer } from "react";
 import Nav from "./components/Nav";
@@ -12,7 +11,7 @@ import "./App.css";
 export const initializeTimes = () => {
   const today = new Date();
   const dateString = today.toISOString().split('T')[0];
-  
+
   // Use API if available, otherwise fallback
   if (window.fetchAPI) {
     return window.fetchAPI(dateString);
@@ -42,11 +41,15 @@ function App() {
 
   return (
     <Router>
-      <header>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
+      <header role="banner">
         <Nav />
       </header>
 
-      <main>
+      <main id="main-content" role="main" tabIndex="-1">
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route
