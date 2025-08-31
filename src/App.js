@@ -4,25 +4,25 @@ function App() {
   return (
     <>
       <header>
-        <h1>Little Lemon</h1>
+        <nav>
+          <h1>Little Lemon</h1>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/reserve">Reserve</a></li>
+            <li><a href="/menu">Menu</a></li>
+          </ul>
+        </nav>
       </header>
 
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/reserve">Reserve a Table</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
-
       <main>
-        <h2>Welcome to Little Lemon</h2>
-        <p>Delicious Mediterranean dishes served fresh every day.</p>
+        <section className="section">About Little Lemon</section>
+        <section className="section">Highlights & Specials</section>
+        <section className="section">Dishes & Photos</section>
+        <section className="section">Testimonials</section>
       </main>
 
       <footer>
-        <p>&copy; 2025 Little Lemon. All rights reserved.</p>
+        <p>© 2025 Little Lemon Restaurant</p>
       </footer>
     </>
   );
