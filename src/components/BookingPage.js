@@ -1,11 +1,12 @@
-import "../App.css";
+import BookingForm from "./BookingForm";
 
-function BookingPage() {
+function BookingPage({ availableTimes, dispatch }) {
   return (
-    <section>
-      <h2>Reserve a Table</h2>
-      <p>Booking functionality will go here.</p>
-    </section>
+    <div className="booking-page">
+      <h2>Make a Reservation</h2>
+      <p>Book your table at Little Lemon</p>
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+    </div>
   );
 }
 

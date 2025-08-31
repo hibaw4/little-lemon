@@ -3,7 +3,7 @@ function CustomersSay() {
   return (
     <section className="customers-say">
       <div className="testimonial-card">
-        <img src="/images/customer1.jpg" alt="Customer" />
+        <img src="/images/dish2.jpeg" alt="Customer" />
         <p>"Amazing food and service!"</p>
         <h4>Customer Name</h4>
       </div>
